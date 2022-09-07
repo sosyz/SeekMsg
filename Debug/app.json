@@ -1,0 +1,140 @@
+﻿{
+    "name": "撤回查询",
+    "version": "3.0.0_Beta",
+    "version_id": 1,
+    "author": "Sonui",
+    "description": "查询消息",
+    "event": [
+        {
+            "id": 1,
+            "type": 1003,
+            "name": "应用启用",
+            "function": "Enable",
+            "priority": 30000
+        },
+        {
+            "id": 2,
+            "type": 1004,
+            "name": "应用停用",
+            "function": "Disable",
+            "priority": 30000
+        },
+        {
+            "id": 3,
+            "type": 1002,
+            "name": "退出清理",
+            "function": "Exit",
+            "priority": 30000
+        },
+        {
+            "id": 4,
+            "type": 2,
+            "name": "Throwable",
+            "function": "Throwable",
+            "priority": 30000
+        },
+        {
+            "id": 5,
+            "type": 101,
+            "name": "System_GroupAdmin_EX",
+            "function": "System_GroupAdmin_EX",
+            "priority": 30000
+        },
+        {
+            "id": 6,
+            "type": 11,
+            "name": "GroupUpload_EX",
+            "function": "GroupUpload_EX",
+            "priority": 30000
+        },
+        {
+            "id": 7,
+            "type": 102,
+            "name": "System_GroupMemberDecrease_EX",
+            "function": "System_GroupMemberDecrease_EX",
+            "priority": 30000
+        },
+        {
+            "id": 8,
+            "type": 103,
+            "name": "System_GroupMemberIncrease_EX",
+            "function": "System_GroupMemberIncrease_EX",
+            "priority": 30000
+        },
+        {
+            "id": 9,
+            "type": 2,
+            "name": "群聊消息",
+            "function": "GroupMsg_EX",
+            "priority": 30000
+        },
+        {
+            "id": 10,
+            "type": 21,
+            "name": "正则消息",
+            "function": "PrivateMsg_EX",
+            "priority": 30000,
+            "regex": {
+                "key": [
+                    "qq",
+                    "num",
+                    "group"
+                ],
+                "expression": [
+                    "^(?<qq>\\d+)在群*(?<group>\\d+)\\s*最近(?<num>\\d+)条消息$"
+                ]
+            }
+        },
+        {
+            "id": 11,
+            "type": 2,
+            "name": "正则消息",
+            "function": "GroupMsg_help",
+            "priority": 30000,
+            "regex": {
+                "key": [
+                    "Account",
+                    "action"
+                ],
+                "expression": [
+                    "^撤回查询$"
+                ]
+            }
+        },
+        {
+            "id": 12,
+            "type": 2,
+            "name": "正则消息",
+            "function": "GroupMsg_use",
+            "priority": 30000,
+            "regex": {
+                "key": [
+                    "qq",
+                    "num"
+                ],
+                "expression": [
+                    "^(\\[CQ:at.*?)*(?<qq>\\d+)(\\])*\\s*最近(?<num>\\d+)条消息$"
+                ]
+            }
+        }
+    ],
+    "menu": [
+        {
+            "name": "设置",
+            "function": "menu"
+        }
+    ],
+    "status": [],
+    "auth": [
+        30,
+        101,
+        103,
+        106,
+        130,
+        132,
+        131,
+        180
+    ],
+    "ret": 1,
+    "apiver": 9
+}
